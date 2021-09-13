@@ -15,15 +15,15 @@ router.get('/',async (req,res,next)=>{
 // });
 
 router.post('/', (req,res,next)=>{
-    const video=new Video({
-        _id:mongoose.Types.ObjectId(),
-        title:req.body.title,
-        videos:req.body.video
-    });
-    video
-        .save()
-        .then(result=>{console.log(result)})
-        .catch(err=>{console.log(err)});
+    // const video=new Video({
+    //     _id:mongoose.Types.ObjectId(),
+    //     title:req.body.title,
+    //     videos:req.body.video
+    // });
+    // video
+    //     .save()
+    //     .then(result=>{console.log(result)})
+    //     .catch(err=>{console.log(err)});
 });
 
 module.exports=router;
