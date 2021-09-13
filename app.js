@@ -7,8 +7,6 @@ const videoRoutes=require('./api/routes/videos');
 app.use(express.json())
 
 const uri = "mongodb+srv://yakov:"+process.env.Mongo_pas+"@cluster0.irzzw.mongodb.net/myDatabase?retryWrites=true&w=majority";
-
-console.log(process.env)
 try {
     mongoose.connect(uri);
 } catch (error) {
