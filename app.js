@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const app=express();
 
 const videoRoutes=require('./api/routes/videos');
+const admin=require('./api/routes/admin');
 
 app.use(express.json())
 
@@ -30,6 +31,7 @@ app.use((req,res, next)=>{
 })
 
 app.use('/',videoRoutes);
+app.use('/admin',admin);
 
 module.exports=app;
 
