@@ -13,7 +13,6 @@ try {
     console.log(error)
 }
 
-
 app.use(express.static('public'));
 app.use('/css',express.static(__dirname+'public/css'))
 
