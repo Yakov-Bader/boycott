@@ -1,11 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const app=express();
 
 const videoRoutes=require('./api/routes/videos');
 const admin=require('./api/routes/admin');
 
-app.use(express.json())
+app.use(express.json());
+
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 const uri = "mongodb+srv://yakov:"+process.env.Mongo_pas+"@cluster0.irzzw.mongodb.net/myDatabase?retryWrites=true&w=majority";
 try {
@@ -17,6 +20,8 @@ try {
 app.use(express.static('public'));
 
 app.use('/css',express.static(__dirname+'public/css'));
+
+//app.use(express.static(__dirname,'public/css/admin.css'))
 
 app.set('views','./views')
 app.set('view engine','ejs');

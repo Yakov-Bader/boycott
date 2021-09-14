@@ -3,58 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="../public/css/admin.css"  type="text/css">
     <link rel = "icon" href = "https://media.istockphoto.com/photos/close-up-of-a-merged-israelipalestinian-flag-picture-id506429823?k=20&m=506429823&s=612x612&w=0&h=hHLeQrZxyhf5iBdzShsJqD242zhIJ3oD1jH18-QwC5k=" type = "image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin| Boycutt? Israel?</title>
-    
+    <style>
+        .right{
+            float: right;
+        }
+        body{
+            text-align: center;
+        }
+        label{
+            font-size: 200%;
+        }
+        textarea,input{
+            width: 100%;
+            margin:1%;
+        }
+        form{
+            margin: 4%;
+            float: left;
+            background-color: aquamarine;
+            width: 40%;
+            border: black 1px solid;
+        }
+        .sub{
+            width: 50%;
+            height: 20%;
+        }
+    </style>
 </head>
 <body>
-    <form action="/add" method="POST">
-            <label for="doc">enter doc name</label>
-            <input id='doc' type="text">
-            <br>
-            <label for="title">enter title</label>
-            <input id='title' type="text">
-            <br>
-            <label for="text">enter text</label>
-            <textarea id='text'></textarea>
-            <br>
-            <button type ="reset">Reset</button>
-            <button type ="submit">Submit</button>
-    </form>
-
-    <form action="/add" method="POST">
+    <h1>Welcome best admin ever</h1>
+    <form action="http://localhost:3000/admin/subject" method="POST">
+        <h1>Add subject</h1>
         <fieldset>
-            <label for="doc">enter doc name</label>
-            <input id='doc' type="text">
+            <label for="Mtitle">enter main</label>
+            <br>
+            <input id='Mtitle' type="text" name="Mtitle">
+            <br>
+            <label for="url">enter embed video url</label>
+            <br>
+            <input id='url' type="text" name="url">
             <br>
             <label for="title">enter title</label>
-            <input id='title' type="text">
+            <br>
+            <input id='title' type="text" name="title">
             <br>
             <label for="text">enter text</label>
-            <textarea id='text'></textarea>
             <br>
-            <button type ="reset">Reset</button>
-            <button type ="submit">Submit</button>
+            <textarea id='text' name="text"></textarea>
+            <br>
+            <input class="sub" type="submit" name="submit" value="SUBMIT">
         </fieldset>
     </form>
 
-    <form action="/add" method="POST">
+    <form action="http://localhost:3000/admin/video" method="POST">
+        <h1>Add video</h1>
         <fieldset>
-            <label for="doc">enter doc name</label>
-            <input id='doc' type="text">
+            <label for="id">enter id</label>
+            <br>
+            <input id='id' type="text" name="id">
+            <br>
+            <label for="url">enter embed video url</label>
+            <br>
+            <input id='url' type="text" name="url">
             <br>
             <label for="title">enter title</label>
-            <input id='title' type="text">
+            <br>
+            <input id='title' type="text" name="title">
             <br>
             <label for="text">enter text</label>
-            <textarea id='text'></textarea>
             <br>
-            <button type ="reset">Reset</button>
-            <button type ="submit">Submit</button>
+            <textarea id='text' name="text"></textarea>
+            <br>
+            <input class="sub" type="submit" name="submit" value="SUBMIT">
         </fieldset>
     </form>
+
+    <form action="http://localhost:3000/admin/subject" method="POST">
+        <h1>Delete Subject</h1>
+        <fieldset>
+            <label for="Mtitle">enter main title</label>
+            <br>
+            <input id='Mtitle' type="text" name="Mtitle">
+            <br>
+            <label for="id">enter id</label>
+            <br>
+            <input id='id' type="text" name="id">
+            <br>
+            <input class="sub" type="submit" name="submit" value="DELETE">
+        </fieldset>
+    </form>
+
+    <form action="http://localhost:3000/admin/video" method="POST">
+        <h1>Delete video</h1>
+        <fieldset>
+            <label for="id">enter id</label>
+            <br>
+            <input id='id' type="text" name="id">
+            <br>
+            <label for="url">enter embed video url</label>
+            <br>
+            <input id='url' type="text" name="url">
+            <br>
+            <label for="title">enter title</label>
+            <br>
+            <input id='title' type="text" name="title">
+            <br>
+            <input class="sub" type="submit" name="submit" value="DELETE">
+        </fieldset>
+    </form>
+
         
 </body>
 </html>

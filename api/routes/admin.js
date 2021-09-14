@@ -1,39 +1,85 @@
 const express=require('express');
 const router=express.Router();
 const mongoose=require('mongoose')
-const addVideo=require('../models/addVideo');
+const Subject=require('../models/subject');
 const path = require('path');
-
 
 let options = {root: path.join(__dirname, "../")};
 options = {root:path.join(options.root, "../views")};
 
 router.get('/:pas',async (req,res,next)=>{
     if(req.params.pas===process.env.Mongo_pas){
-        //res.sendFile( path.resolve('src/app/index.html') );
         let options = {root: path.join(__dirname, "../")};
         options = {root:path.join(options.root, "../views")};
         res.sendFile('admin.html',options);
     }
 });
 
-router.post('/:kind', (req,res,next)=>{
-    const send=null;
-    if(kind==="dfghj"){
-        const video=new addVideo({
+router.post('/subject', (req,res,next)=>{
+    if(req.body.submit==="SUBMIT"){
+        const subject=new Subject({
             _id:mongoose.Types.ObjectId(),
-            name:req.body.title,
-            arr:[{url:req.body.url,
+            name:req.body.Mtitle,
+            arr:[{
+                url:req.body.url,
                 title:req.body.title,
-                text:req.body.text}]
+                text:req.body.text
+            }]
         });
-        send=video;
+        subject
+            .save()
+            .then((result)=>{
+                res.status(201).json({
+                    massage:'good post for',
+                    created:result})
+            })
+            .catch((error)=>{
+                res.status(500).json({
+                    error:error
+                })
+            });
+    }else if(req.body.submit==="DELETE"){
+        Subject.remove({
+            _id:req.body.id,
+            name:req.body.Mtitle
+        })
+        .exec()
+        .then((result)=>{
+            res.status(201).json({
+                massage:'good post for',
+                created:result})
+        })    
+        .catch((error)=>{
+            res.status(500).json({
+                error:error
+            })
+        });
     }
     
-    send
-        .save()
-        .then(result=>{console.log(result)})
-        .catch(err=>{console.log(err)});
+});
+
+router.post('/video', (req,res,next)=>{
+    if(req.body.submit==="SUBMIT"){
+        Subject.update(
+            { _id: req.body.id }, 
+            { $push: { arr: {url:req.body.id,title:req.body.title, text:req.body.text} } },
+            {new: true, upsert: true }
+        )
+        .exec()
+        .then((result)=>{
+            res.status(201).json({
+                massage:'good post for',
+                created:result})
+        })    
+        .catch((error)=>{
+            res.status(500).json({
+                error:error
+            })
+        });
+
+    }else if(req.body.submit==="DELETE"){
+        
+    }
 });
 
 module.exports=router;
