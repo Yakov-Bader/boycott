@@ -7,9 +7,13 @@ const path = require('path');
 
 let options = {root: path.join(__dirname, "../")};
 options = {root:path.join(options.root, "../views")};
+
 router.get('/:pas',async (req,res,next)=>{
     if(req.params.pas===process.env.Mongo_pas){
-        res.sendFile('sign.html',options);
+        //res.sendFile( path.resolve('src/app/index.html') );
+        let options = {root: path.join(__dirname, "../")};
+        options = {root:path.join(options.root, "../views")};
+        res.sendFile('admin.html',options);
     }
 });
 

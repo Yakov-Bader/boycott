@@ -7,7 +7,6 @@ const videos=require('../models/video')
 
 router.get('/',async (req,res,next)=>{
     const data= await videos.find({});
-    console.log(data)
     res.render('show',{objs:data})
 });
 // router.get('/', (req,res,next)=>{
