@@ -1,3 +1,5 @@
+/* this page is use, it is just for playing around
+
 const express = require('express');
 const app = express();
 
@@ -20,8 +22,7 @@ app.post('/add',(req, res) => {
   res.send(req.body);
 });
 app.get('/',async (req, res) => {
-  const uri = "mongodb+srv://yakov:tbhhfuk100@cluster0.irzzw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-  //const client = new MongoClient(uri);
+  const client = new MongoClient(uri);
   
   data=[];
   try {
@@ -56,4 +57,4 @@ async function getList(client){
   data=list;
   //const database=await client.db("myDatabase").listCollections().toArray();
 
-}
+}*/
