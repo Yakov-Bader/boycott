@@ -1,8 +1,6 @@
-a{
-    color: darkblue;
-}
-a:visited{
-    color: darkblue;
+*{
+    margin:0;
+    padding: 0;
 }
 h3{
     font-size: 210%;
@@ -11,8 +9,19 @@ p{
     font-size: 200%;
 }
 .header{
-    text-align: left;
-    width: max-content;
+    margin: 0%;
+    width: 99%;
+    height: 67px;
+    background-color: blue;
+    border:2px solid black ;
+}
+.sub{
+    padding: 10px;
+    float: left;
+    font-size: 15px;
+    margin:0px 5px 0px 0px;
+    border:2px solid black ;
+    background-color: blue;  
 }
 body{
     background-color: #cccccc;
@@ -35,14 +44,14 @@ fieldset{
 }
 .frame{
     border-radius: 50px;
-    margin: auto;
-    width: 85%;
-    height: 400px;
+    margin:  auto 5px 10px 50px;
+    width: 45%;
+    height: 500px;
+    float: left;
     background-color: blue;
 }
 .frame:hover{
     background-color: rgb(0, 0, 133);
-    width: 91%;
 }
 .frame:hover h3{
     color: cornsilk;
@@ -52,12 +61,11 @@ fieldset{
 }
 iframe{
     border-radius: 50px;
-    width:50%;
-    height:99%;
+    height:50%;
+    width: 100%;
 }
 .text{
     margin: 1%;
-    width: 45%;
     text-align: center;
 }
 @media all and (max-width:1100px){

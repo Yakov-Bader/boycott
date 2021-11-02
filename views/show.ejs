@@ -9,40 +9,46 @@
     <title>Boycutt? Israel?</title>
 </head>
 <body>
-    <h1><u>These videos are meant to teach you who Israel realy is:</u></h1>
-    <img src="https://media.istockphoto.com/photos/close-up-of-a-merged-israelipalestinian-flag-picture-id506429823?k=20&m=506429823&s=612x612&w=0&h=hHLeQrZxyhf5iBdzShsJqD242zhIJ3oD1jH18-QwC5k=" alt="peace" width="90%" height="300px">
-    <div class="header">
-        <h2><u>The subjects here are: </u></h2>
-        <% objs.forEach(function(obj){ %>
-            <h2><%=obj.name %>
-                <%if(obj.name=="PLO? Hamas? Israel"){%>
-                    <br>(for more press <a href='https://www.youtube.com/results?search_query=musab+hassan+yusuf+' target="_blank">here)</a>
-                <%}%>
-            </h2>
-        <% }); %>  
-    </div>    
+    <header>
+        <div class="header">
+            <h2>For videos by subject:</h2>
+            <% objs.forEach(function(obj){ %>
+                <form action="http://localhost:3000/'<%=obj.name %>'" method="GET">
+                    <input class="sub" type="submit" name="submit" value="'<%=obj.name %>'">
+                </form>     
+            <% }); %> 
+        </div>
+        <h1><u>These videos are meant to teach you who Israel realy is:</u></h1>
+        <img src="https://media.istockphoto.com/photos/close-up-of-a-merged-israelipalestinian-flag-picture-id506429823?k=20&m=506429823&s=612x612&w=0&h=hHLeQrZxyhf5iBdzShsJqD242zhIJ3oD1jH18-QwC5k=" alt="peace" width="90%" height="300px">  
+    </header>    
     <% objs.forEach(function(obj){ %>
-        <h1><%=obj.name %> (<%=obj.arr.length %>)</h1>
+        <%let bool=true %>
         <% obj.arr.forEach(function(g,i=0){%>
-            <div class="frame">
-                <% if(i%2==0){%>
-                    <iframe class="right" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-                    <div class="text left">
-                        <h3><%=g.title %></h3>
-                        <p><%=g.text %></p>
-                    </div>
-                <%}else{%>
-                    <iframe class="left" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-                    <div class="text right">
-                        <h3><%=g.title %></h3>
-                        <p ><%=g.text %></p>
-                    </div>
-                <%}%>
-            </div>
-            <br>
+            <%if(bool){%>
+                <div class="frame">
+                    <% if(i%2==0){%>
+                        <iframe src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                        <div class="text">
+                            <h3><%=g.title %></h3>
+                            <p><%=g.text %></p>
+                        </div>
+                    <%}else{%>
+                        <iframe src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                        <div class="text">
+                            <h3><%=g.title %></h3>
+                            <p ><%=g.text %></p>
+                        </div>
+                    <%}%>
+                </div>
+            <%} %>       
+            <%if(i==1){bool=false}%>
         <%i++ }); %>
         
-    <% }); %>
-    
+    <% }); %> 
+    <script>
+        function go(to){
+            alert(to)
+        }
+    </script>  
 </body>
 </html>

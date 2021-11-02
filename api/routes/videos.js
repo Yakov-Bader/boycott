@@ -9,7 +9,10 @@ router.get('/',async (req,res,next)=>{
     const data= await videos.find({});
     res.render('show',{objs:data})
 });
-
+router.get('/:sub',async (req,res,next)=>{
+    const data= await videos.find({});
+    res.render('main',{objs:data})
+});
 
 router.post('/', (req,res,next)=>{
     
