@@ -15,7 +15,7 @@
     <% objs.forEach(function(obj){ %>
         <h1><%=obj.name %> (<%=obj.arr.length %>)</h1>
         <% obj.arr.forEach(function(g,i=0){%>
-            <div class="frame">
+            <div class="Mframe">
                 <% if(i%2==0){%>
                     <iframe class="right" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
                     <div class="text left">

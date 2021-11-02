@@ -13,8 +13,8 @@
         <div class="header">
             <h2>For videos by subject:</h2>
             <% objs.forEach(function(obj){ %>
-                <form action="https://boycott-israel.herokuapp.com/'<%=obj.name %>'" method="GET">
-                    <input class="sub" type="submit" name="submit" value="'<%=obj.name %>'">
+                <form class="sub" action="https://boycott-israel.herokuapp.com/'<%=obj.name %>'" method="GET">
+                    <input class="subBTN" type="submit" name="submit" value="'<%=obj.name %>'">
                 </form>     
             <% }); %> 
         </div>

@@ -16,12 +16,18 @@ p{
     border:2px solid black ;
 }
 .sub{
-    padding: 10px;
     float: left;
-    font-size: 15px;
     margin:0px 5px 0px 0px;
-    border:2px solid black ;
+    width: 15%;
+    
     background-color: blue;  
+}
+.subBTN{
+    border:2px solid black ;
+    width: 100%;
+    background-color: blue;  
+    padding: 10px;
+    font-size: 15px;
 }
 body{
     background-color: #cccccc;
@@ -48,6 +54,13 @@ fieldset{
     width: 45%;
     height: 500px;
     float: left;
+    background-color: blue;
+}
+.Mframe{
+    border-radius: 50px;
+    margin:  auto 5px 10px 50px;
+    width: 90%;
+    height: 400px;
     background-color: blue;
 }
 .frame:hover{
