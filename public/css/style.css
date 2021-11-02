@@ -19,7 +19,6 @@ p{
     float: left;
     margin:0px 5px 0px 0px;
     width: 15%;
-    
     background-color: blue;  
 }
 .subBTN{
@@ -83,6 +82,11 @@ iframe{
     width: 50%;
 }
 .text{
+    margin: 1%;
+    text-align: center;
+}
+.Mtext{
+    width: 40%;
     margin: 1%;
     text-align: center;
 }

@@ -18,13 +18,13 @@
             <div class="Mframe">
                 <% if(i%2==0){%>
                     <iframe class="Miframe right" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-                    <div class="text left">
+                    <div class="Mtext left">
                         <h3><%=g.title %></h3>
                         <p><%=g.text %></p>
                     </div>
                 <%}else{%>
                     <iframe class="Miframe left" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-                    <div class="text right">
+                    <div class="Mtext right">
                         <h3><%=g.title %></h3>
                         <p ><%=g.text %></p>
                     </div>
