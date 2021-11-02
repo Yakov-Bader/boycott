@@ -77,6 +77,11 @@ iframe{
     height:50%;
     width: 100%;
 }
+.Miframe{
+    border-radius: 50px;
+    height:100%;
+    width: 50%;
+}
 .text{
     margin: 1%;
     text-align: center;
