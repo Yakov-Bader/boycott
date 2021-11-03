@@ -9,6 +9,7 @@ p{
     font-size: 200%;
 }
 .header{
+    border-radius: 0 0 17px 17px;
     margin:  0% 0% 10px 0%;
     width: 99%;
     height: 67px;
@@ -18,11 +19,13 @@ p{
 .sub{
     margin:0px 5px 0px 0px;
     width: 15%;
+    border-radius: 15px;
     background-color: blue;
     float: left;    
 }
 .subBTN{
-    border:2px solid black ;
+    border-radius: 15px;
+    border:1px solid black ;
     width: 100%;
     background-color: blue;  
     padding: 10px;
