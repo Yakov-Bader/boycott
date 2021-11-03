@@ -106,8 +106,10 @@ img{
         width: 100%;
     }
     .Mframe{
-        width: 100%;
+        width: 95%;
         height: 350px;
+        margin:  0% auto 1px auto;
+        float: none;
     }
     .frame{
         float: none;
