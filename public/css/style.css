@@ -9,17 +9,17 @@ p{
     font-size: 200%;
 }
 .header{
-    margin: 0%;
+    margin:  0% 0% 10px 0%;
     width: 99%;
     height: 67px;
     background-color: blue;
     border:2px solid black ;
 }
 .sub{
-    float: left;
     margin:0px 5px 0px 0px;
     width: 15%;
-    background-color: blue;  
+    background-color: blue;
+    float: left;    
 }
 .subBTN{
     border:2px solid black ;
@@ -27,6 +27,7 @@ p{
     background-color: blue;  
     padding: 10px;
     font-size: 15px;
+    
 }
 body{
     background-color: #cccccc;
@@ -90,9 +91,28 @@ iframe{
     margin: 1%;
     text-align: center;
 }
+img{
+    width: 99%;
+    margin: auto;
+}
 @media all and (max-width:1100px){
-    .frame{
+    .sub{
+        min-width: 100px;   
+    }
+    .subBTN{
+        font-size: 10px; 
+    }
+    header{
         width: 100%;
+    }
+    .Mframe{
+        width: 100%;
+        height: 350px;
+    }
+    .frame{
+        float: none;
+        margin:  0% auto 1px auto;
+        width: 95%;
         height: 350px;
     }
     h3{
@@ -103,13 +123,23 @@ iframe{
     }
     @media all and (max-width:750px){
         
-        .frame:hover{
+        .Mframe:hover{
             background-color: rgb(73, 73, 248);
             height: 355px;
         }
-        iframe{
+        .Miframe{
             width:99%;
             height:60%;
+            float: none;
+        }
+        iframe{
+            width:100%;
+            height:60%;
+            margin: auto;
+            float: none;
+        }
+        .Mtext{
+            width: 100%;
             float: none;
         }
         .text{
