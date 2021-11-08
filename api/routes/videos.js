@@ -10,8 +10,13 @@ router.get('/',async (req,res,next)=>{
     res.render('show',{objs:data})
 });
 router.get('/:sub',async (req,res,next)=>{
-    const list= await videos.find({name:req.params.sub});
-    res.render('main',{obj:list})
+    let tit=[];
+    const titles= await videos.find({});
+    titles.forEach((obj)=>{
+        tit.push(obj.name);
+    });
+    const list=await videos.find({name:req.params.sub});
+    res.render('main',{names:tit,obj:list})
 });
 
 router.post('/', (req,res,next)=>{

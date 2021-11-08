@@ -57,4 +57,8 @@ async function getList(client){
   data=list;
   //const database=await client.db("myDatabase").listCollections().toArray();
   https://boycott-israel.herokuapp.com/
+  http://localhost:3000/
+
+  about us
+  Terms of Service
 }*/

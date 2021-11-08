@@ -9,28 +9,46 @@
     <title>Boycutt? Israel?</title>
 </head>
 <body>
-    <img src="https://media.istockphoto.com/photos/close-up-of-a-merged-israelipalestinian-flag-picture-id506429823?k=20&m=506429823&s=612x612&w=0&h=hHLeQrZxyhf5iBdzShsJqD242zhIJ3oD1jH18-QwC5k=" alt="peace" width="90%" height="300px">
-    <br>
-    <h1><u><%=obj[0].name %></u></h1>
-    <% obj[0].arr.forEach(function(g,i=0){%>
-        <div class="Mframe">
-            <% if(i%2==0){%>
-                <iframe class="Miframe right" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-                <div class="Mtext left">
-                    <h3><%=g.title %></h3>
-                    <p><%=g.text %></p>
-                </div>
-            <%}else{%>
-                <iframe class="Miframe left" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-                <div class="Mtext right">
-                    <h3><%=g.title %></h3>
-                    <p ><%=g.text %></p>
-                </div>
-            <%}%>
+    <header>
+        <div class="header">
+            <% names.forEach(function(name){ %>
+                <form class="sub" action="http://localhost:3000/<%=name %>" method="GET">
+                    <input class="subBTN" type="submit" name="submit" value="<%=name %>">
+                </form>     
+            <% }); %> 
         </div>
-        <br>
-    <%i++ }); %>
-
-    
+    </header>
+    <main>
+        <img src="https://media.istockphoto.com/photos/close-up-of-a-merged-israelipalestinian-flag-picture-id506429823?k=20&m=506429823&s=612x612&w=0&h=hHLeQrZxyhf5iBdzShsJqD242zhIJ3oD1jH18-QwC5k=" alt="peace">
+        <h1><u><%=obj[0].name %></u></h1>
+        <% obj[0].arr.forEach(function(g,i=0){%>
+            <div class="Mframe">
+                <% if(i%2==0){%>
+                    <iframe class="Miframe right" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                    <div class="Mtext left">
+                        <h3><%=g.title %></h3>
+                        <p><%=g.text %></p>
+                    </div>
+                <%}else{%>
+                    <iframe class="Miframe left" src= "<%= g.url %>"  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+                    <div class="Mtext right">
+                        <h3><%=g.title %></h3>
+                        <p ><%=g.text %></p>
+                    </div>
+                <%}%>
+            </div>
+            <br>
+        <%i++ }); %>   
+    </main>
+    <footer>
+        <div>
+            <h3>Disclaimer</h3>
+            <p>The website has an idea its representing, and we beleve the idea is true, but there is many videos uploaded from many diffrent people, we take no resposibilty on every small fact on the website, you could always check online the facts</p>
+        </div>
+        <div>
+            <h3>About us</h3>
+            <p>This website was created to show a bit of the side of the Israeli's, I relized many people only see "The Conflict" from the Palastinian side, and dont acknowledge that there is a nother side of people who are trying to live, and are getting killed by terrorists</p>
+        </div>
+    </footer> 
 </body>
 </html>
