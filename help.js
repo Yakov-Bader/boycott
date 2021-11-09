@@ -59,6 +59,9 @@ async function getList(client){
   https://boycott-israel.herokuapp.com/
   http://localhost:3000/
 
+  onclick="mobileMenu()"
+	<script src="js/adminScript.js"></script>
+
   about us
   Terms of Service
 }*/
