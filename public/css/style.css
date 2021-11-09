@@ -27,8 +27,10 @@ header{
 .sub{
     margin:0px 2.5% 0px 2.5%;
     width: 15%;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .subBTN{
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 100%;
     background-color: green;
     padding: 10px;
@@ -53,11 +55,6 @@ h1{
 }
 .right{
     float: right;
-}
-form{
-    background-color: aquamarine;
-    width: 40%;
-    border: black 1px solid;
 }
 .frame{
     padding: 1%;
@@ -106,7 +103,7 @@ img{
     border-radius: 50px;
 }
 footer{
-    border: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);       
     display: flex;
     flex-direction: row-reverse;
     text-align: center;
@@ -114,7 +111,6 @@ footer{
 }
 footer div{
     max-width: 49%;
-    
     background-color: gray;
     padding: 0 4% 0 4%;
 }
@@ -124,7 +120,7 @@ footer div{
         height: 200px;
     }
     .subBTN{
-        font-size: 15px; 
+        font-size: 100%; 
     }
     p{
         font-size: 130%;
@@ -141,18 +137,26 @@ footer div{
             float: none;
         }
         .frame{
+            font-size: 100%;
             float: none;
             margin:  0% auto 10px auto;
             width: 80%;
             height: 300px;
         }
+        .subBTN{
+            font-size: 50%;
+            padding: 0; 
+            height: 100%;
+        }
+        
         .Miframe{
             width:99%;
             height:60%;
+            margin: auto;
             float: none;
         }
         iframe{
-            width:100%;
+            width:99%;
             height:60%;
             margin: auto;
             float: none;
