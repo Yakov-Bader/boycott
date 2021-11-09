@@ -16,7 +16,7 @@
         </div>
         <div class="header">
             <% objs.forEach(function(obj){ %>
-                <form class="sub" action="http://localhost:3000/<%=obj.name %>" method="GET">
+                <form class="sub" action="https://boycott-israel.herokuapp.com/<%=obj.name %>" method="GET">
                     <input class="subBTN" type="submit" name="submit" value="<%=obj.name %>">
                 </form>     
             <% }); %> 
