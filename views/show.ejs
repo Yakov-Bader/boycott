@@ -11,12 +11,12 @@
 <body>
     <header>
         <div class="phone-header">
-            <img class="lines right" src="/public/images/lines2.png"  alt="lines" onclick="mobile()">
+            <img class="lines left" src="/public/images/lines2.png"  alt="lines" onclick="mobile()">
             <h1>Boycutt? Israel? </h1>
         </div>
         <div class="header">
             <% objs.forEach(function(obj){ %>
-                <form class="sub" action="https://boycott-israel.herokuapp.com/<%=obj.name %>" method="GET">
+                <form class="sub" action="http://localhost:3000/<%=obj.name %>" method="GET">
                     <input class="subBTN" type="submit" name="submit" value="<%=obj.name %>">
                 </form>     
             <% }); %> 
