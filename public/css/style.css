@@ -153,7 +153,7 @@ footer div{
             background-repeat: no-repeat;
             background-size: 100% 100%;
             float: left;
-            top: 5px;
+            margin-top: 5px !important;
             margin: 5px;            
         }
         #phone_list{
@@ -186,7 +186,7 @@ footer div{
             font-size: 80%;
             float: none;
             margin:  0% auto 15px auto;
-            width: 80%;
+            width: 85%;
             height: 370px;
         }
         .subBTN{
