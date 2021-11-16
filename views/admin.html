@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin| Boycutt? Israel?</title>
     <style>
-        .right{
-            float: right;
-        }
         body{
             text-align: center;
         }
@@ -21,8 +18,7 @@
             margin:1%;
         }
         form{
-            margin: 4%;
-            float: left;
+            margin: auto;
             background-color: aquamarine;
             width: 40%;
             border: black 1px solid;
@@ -36,19 +32,19 @@
 <body>
     <h1>Welcome best admin ever</h1>
     <form action="https://boycott-israel.herokuapp.com/admin/subject" method="POST">
-        <h1>Add subject</h1>
+        <h1>Subject</h1>
         <fieldset>
             <label for="Mtitle">enter main</label>
             <br>
             <input id='Mtitle' type="text" name="Mtitle">
-            
+            <br>
             <input class="sub" type="submit" name="submit" value="SUBMIT">
             <input class="sub" type="submit" name="submit" value="DELETE">
         </fieldset>
     </form>
 
     <form action="https://boycott-israel.herokuapp.com/admin/video" method="POST">
-        <h1>Add video</h1>
+        <h1>Video</h1>
         <fieldset>
             <label for="subject">enter subject</label>
             <br>

@@ -130,30 +130,30 @@ footer div{
     p{
         font-size: 130%;
     }
-    .frame{
+    .Mframe,.frame{
         width: 60%;
-        font-size: 150%;
+        font-size: 130%;
     }
-    .Mframe{
-        width: 60%;
-        font-size: 150%;
-    }
-    @media all and (max-width:750px){
+    @media all and (max-width:800px){
         .phone-header{
             width: 100%;
             margin-top: 0;
             top:0;
-            display:inherit !important;
+            display:block !important;
             background-color: lightgreen;
             text-align: center;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
         .lines{
-            display:inline-block;
-            height: 20px;
-            width: 20px;
-            padding:auto;
-            margin: 5px;
+            background-image: url("../images/menu.png");
+            background-color: #cccccc;
+            height: 25px;
+            width: 25px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            margin: 5px;            
         }
         #phone_list{
             float: right;
@@ -179,59 +179,36 @@ footer div{
         }
         main img{
             width: 90%;
-            height: 100px;
+            height: 130px;
         }
-        .Mframe{
-            font-size: 100%;
-            float: none; 
-            margin:  0% auto 10px auto;
-            width: 80%;
-            height: 300px;
-        }
-        .frame{
+        .frame,.Mframe{
             font-size: 100%;
             float: none;
-            margin:  0% auto 10px auto;
-            width: 80%;
-            height: 300px;
+            margin:  0% auto 15px auto;
+            width: 70%;
+            height: 350px;
         }
         .subBTN{
             font-size: 50%;
             padding: 0; 
             height: 100%;
         }
-        .Miframe{
+        iframe,.Miframe{
             width:99%;
             height:60%;
             margin: auto;
             float: none;
         }
-        iframe{
-            width:99%;
-            height:60%;
-            margin: auto;
-            float: none;
-        }
-        .Mtext{
+        .text,.Mtext{
             width: 100%;
             float: none;
-        }
-        .text{
-            width: 100%;
-            float: none;
-        }
-        h3{
-            font-size: 110%;
-        }
-        p{
-            font-size: 90%;
         }
         .catigory{
             display: none;
         }
         @media all and (max-width:330px){
-            p{
-                font-size: 80%;
+            iframe,.Miframe{
+                height:55%;
             }
         }
     }
