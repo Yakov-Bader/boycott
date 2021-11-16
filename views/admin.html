@@ -35,73 +35,24 @@
 </head>
 <body>
     <h1>Welcome best admin ever</h1>
-    <form action="http://localhost:3000/admin/subject" method="POST">
+    <form action="https://boycott-israel.herokuapp.com/admin/subject" method="POST">
         <h1>Add subject</h1>
         <fieldset>
             <label for="Mtitle">enter main</label>
             <br>
             <input id='Mtitle' type="text" name="Mtitle">
-            <br>
-            <label for="url">enter embed video url</label>
-            <br>
-            <input id='url' type="text" name="url">
-            <br>
-            <label for="title">enter title</label>
-            <br>
-            <input id='title' type="text" name="title">
-            <br>
-            <label for="text">enter text</label>
-            <br>
-            <textarea id='text' name="text"></textarea>
-            <br>
+            
             <input class="sub" type="submit" name="submit" value="SUBMIT">
-        </fieldset>
-    </form>
-
-    <form action="http://localhost:3000/admin/video" method="POST">
-        <h1>Add video</h1>
-        <fieldset>
-            <label for="id">enter id</label>
-            <br>
-            <input id='id' type="text" name="id">
-            <br>
-            <label for="url">enter embed video url</label>
-            <br>
-            <input id='url' type="text" name="url">
-            <br>
-            <label for="title">enter title</label>
-            <br>
-            <input id='title' type="text" name="title">
-            <br>
-            <label for="text">enter text</label>
-            <br>
-            <textarea id='text' name="text"></textarea>
-            <br>
-            <input class="sub" type="submit" name="submit" value="SUBMIT">
-        </fieldset>
-    </form>
-
-    <form action="http://localhost:3000/admin/subject" method="POST">
-        <h1>Delete Subject</h1>
-        <fieldset>
-            <label for="Mtitle">enter main title</label>
-            <br>
-            <input id='Mtitle' type="text" name="Mtitle">
-            <br>
-            <label for="id">enter id</label>
-            <br>
-            <input id='id' type="text" name="id">
-            <br>
             <input class="sub" type="submit" name="submit" value="DELETE">
         </fieldset>
     </form>
 
-    <form action="http://localhost:3000/admin/video" method="POST">
-        <h1>Delete video</h1>
+    <form action="https://boycott-israel.herokuapp.com/admin/video" method="POST">
+        <h1>Add video</h1>
         <fieldset>
-            <label for="id">enter id</label>
+            <label for="subject">enter subject</label>
             <br>
-            <input id='id' type="text" name="id">
+            <input id='subject' type="text" name="subject">
             <br>
             <label for="url">enter embed video url</label>
             <br>
@@ -111,6 +62,11 @@
             <br>
             <input id='title' type="text" name="title">
             <br>
+            <label for="text">enter text</label>
+            <br>
+            <textarea id='text' name="text"></textarea>
+            <br>
+            <input class="sub" type="submit" name="submit" value="SUBMIT">
             <input class="sub" type="submit" name="submit" value="DELETE">
         </fieldset>
     </form>

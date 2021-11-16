@@ -12,7 +12,7 @@ h3{
     font-size: 210%;
 }
 p{
-    font-size: 200%;
+    font-size: 180%;
 }
 header{
     position: fixed;
@@ -68,7 +68,6 @@ main h1{
     margin: 5px auto ;
     width: 40%;
     height: 510px;
-    float: left;
     background-color: rgb(153, 201, 255);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
 }
@@ -135,6 +134,10 @@ footer div{
         width: 60%;
         font-size: 150%;
     }
+    .Mframe{
+        width: 60%;
+        font-size: 150%;
+    }
     @media all and (max-width:750px){
         .phone-header{
             width: 100%;
@@ -179,10 +182,11 @@ footer div{
             height: 100px;
         }
         .Mframe{
+            font-size: 100%;
+            float: none; 
+            margin:  0% auto 10px auto;
             width: 80%;
             height: 300px;
-            margin:  0% auto 10px auto;
-            float: none;
         }
         .frame{
             font-size: 100%;
@@ -224,6 +228,11 @@ footer div{
         }
         .catigory{
             display: none;
+        }
+        @media all and (max-width:330px){
+            p{
+                font-size: 80%;
+            }
         }
     }
     

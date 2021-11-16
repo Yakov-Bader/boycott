@@ -21,8 +21,6 @@ app.use(express.static('public'));
 
 app.use('/css',express.static(__dirname+'public/css'));
 
-//app.use(express.static(__dirname,'public/css/admin.css'))
-
 app.set('views','./views')
 app.set('view engine','ejs');
 
