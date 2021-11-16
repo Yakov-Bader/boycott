@@ -64,7 +64,7 @@ router.post('/video/:pas', (req,res,next)=>{
         if(req.body.submit==="SUBMIT"){
             Subject.update(
                 { name: req.body.subject }, 
-                { $push: { arr: {url:req.body.id,title:req.body.title, text:req.body.text} } },
+                { $push: { arr: {url:req.body.url,title:req.body.title, text:req.body.text} } },
                 {new: true, upsert: true }
             )
             .exec()
