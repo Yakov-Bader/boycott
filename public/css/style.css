@@ -134,7 +134,7 @@ footer div{
         width: 60%;
         font-size: 130%;
     }
-    @media all and (max-width:800px){
+    @media all and (max-width:750px){
         .phone-header{
             width: 100%;
             margin-top: 0;
@@ -153,6 +153,7 @@ footer div{
             background-repeat: no-repeat;
             background-size: 100% 100%;
             float: left;
+            top: 5px;
             margin: 5px;            
         }
         #phone_list{
@@ -182,11 +183,11 @@ footer div{
             height: 130px;
         }
         .frame,.Mframe{
-            font-size: 100%;
+            font-size: 80%;
             float: none;
             margin:  0% auto 15px auto;
-            width: 70%;
-            height: 350px;
+            width: 80%;
+            height: 370px;
         }
         .subBTN{
             font-size: 50%;
@@ -206,11 +207,8 @@ footer div{
         .catigory{
             display: none;
         }
-        @media all and (max-width:330px){
-            iframe,.Miframe{
-                height:55%;
-            }
+        footer{
+            font-size: 70%;
         }
-    }
-    
+    }    
 }
