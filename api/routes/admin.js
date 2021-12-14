@@ -82,7 +82,7 @@ router.post('/video/:pas', (req,res,next)=>{
         }else if(req.body.submit==="DELETE"){
             Subject.update(
                 { name: req.body.subject }, 
-                { $pull: { arr: {url:req.body.id,title:req.body.title, text:req.body.text} } },
+                { $pull: { arr: {url:req.body.url,title:req.body.title, text:req.body.text} } },
                 {new: true, upsert: true }
             )
             .exec()

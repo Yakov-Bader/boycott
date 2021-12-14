@@ -207,6 +207,9 @@ footer div{
         .catigory{
             display: none;
         }
+        h3{
+            font-size: 20px;
+        }
         footer{
             font-size: 70%;
         }
