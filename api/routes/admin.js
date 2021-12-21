@@ -11,7 +11,8 @@ options = {root:path.join(options.root, "../views")};
 router.get('/:pas',async (req,res,next)=>{
     let options = {root: path.join(__dirname, "../")};
     options = {root:path.join(options.root, "../views")};
-    if(req.params.pas===process.env.Mongo_pas){
+    console.log(req.params.pas)
+    if(req.params.pas===process.env.My_Pas){
         res.render('admin.ejs',options);
     }else{
         res.json({"error":"this page does not exist","home page link:":"https://boycott-israel.herokuapp.com/"});
@@ -19,7 +20,7 @@ router.get('/:pas',async (req,res,next)=>{
 });
 
 router.post('/subject/:pas', (req,res,next)=>{
-    if(req.params.pas===process.env.Mongo_pas){
+    if(req.params.pas===process.env.My_Pas){
         if(req.body.submit==="SUBMIT"){
             const subject=new Subject({
                 _id:mongoose.Types.ObjectId(),
@@ -60,7 +61,7 @@ router.post('/subject/:pas', (req,res,next)=>{
 });
 
 router.post('/video/:pas', (req,res,next)=>{
-    if(req.params.pas===process.env.Mongo_pas){
+    if(req.params.pas===process.env.My_Pas){
         if(req.body.submit==="SUBMIT"){
             Subject.update(
                 { name: req.body.subject }, 
