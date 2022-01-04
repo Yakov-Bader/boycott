@@ -213,5 +213,11 @@ footer div{
         footer{
             font-size: 70%;
         }
+        @media all and (max-width:300px){
+            .frame,.Mframe{
+                font-size: 70%;
+            }
+        }
+
     }    
 }
