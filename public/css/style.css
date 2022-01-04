@@ -130,12 +130,20 @@ footer div{
         font-size: 100%; 
     }
     .Mframe,.frame{
+        height: 510px;
         width: 50vw;
     }
+    .Miframe{
+        border-radius: 50px;
+        height:50%;
+        width: 100%;
+    }
     .text,.Mtext{
-        font-size: 1.5vw;
+        width: 100%;
+        font-size: 1.7vw;
         float: none;
     }
+
     footer{
         font-size: 1.5vw;
     }
@@ -191,7 +199,7 @@ footer div{
             }
             .frame,.Mframe{
                 float: none;
-                margin:   0% auto 6vw auto;
+                margin:   0% auto 2vw auto;
                 width: 80%;
                 height: 370px;
             }
