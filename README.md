@@ -5,4 +5,5 @@ There are three main pages, two for the user including the fist main page with t
 The website is made from: express node js server, ejs, personal api, html, css, mongodb atlas database, and lots of fun :)  
 Link to the website https://boycott-israel.herokuapp.com/  
 The admin page looks like this:
-![Screenshot (2)](https://user-images.githubusercontent.com/64130496/142500942-adaafeed-b0bd-4f5b-9236-b670b1db5937.png)
+
+![Screenshot (2)](https://user-images.githubusercontent.com/64130496/147858870-2127e6a6-a315-4ea6-b8ab-53febedcc352.png)
