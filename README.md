@@ -1,4 +1,4 @@
-# boycutt? Israel?
+# boycott? Israel?
 I have relized that many people only see one side of the Israeli Palastinian conflict, so I decided to make a website to deal with that.  
 The website is a collection of videos sorted by catigory, with a short explention of each video.  
 There are three main pages, two for the user including the fist main page with two videos of each category, a few buttons in the header, a nother page of all the videos on the catigory you preesed on. One page is for the addmin (me) to add or edit videos by choice, without needing to go into the databse.  
